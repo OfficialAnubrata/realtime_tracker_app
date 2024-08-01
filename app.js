@@ -30,5 +30,5 @@ io.on('connection',function(socket) {
 app.get("/", (req, res) => {
   res.render('index');
 });
-
-server.listen(3000);
+const port = process.env.PORT || 3000;
+server.listen(port);
