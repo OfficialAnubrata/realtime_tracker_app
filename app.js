@@ -21,7 +21,13 @@ io.on('connection',function(socket) {
     })
     
     socket.on("disconnect", function() {
-        io.emit("user-disconnected", socket.id);  // Notify all connected clients that a user disconnected.  // Emits an event to all connected clients named 'user-disconnected'.  // The client that disconnected is identified by the socket.id property.  // This allows us to remove the disconnected client from the clients list in our client-side code.  // The client-side code will listen for this event and update its client list accordingly.  // This is a simple
+        io.emit("user-disconnected", socket.id);  
+        // Notify all connected clients that a user disconnected.  
+        // Emits an event to all connected clients named 'user-disconnected'.
+        // The client that disconnected is identified by the socket.id property.
+        // This allows us to remove the disconnected client from the clients list in our client-side code.
+        // The client-side code will listen for this event and update its client list accordingly.
+        // This is a simple
         console.log("A user disconnected");
     })
     console.log("A user connected");
